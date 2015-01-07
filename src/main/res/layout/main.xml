@@ -1,0 +1,203 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:orientation="vertical"
+    tools:context=".Main">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:text="锁定EditText内容："
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+
+        <EditText
+            android:id="@+id/etLock"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:id="@+id/btnLock"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="锁定" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_marginTop="50dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="数字类型验证码：" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tvHideA"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:textSize="30dp"
+                android:gravity="center"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/tvHideB"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:textSize="30dp"
+                android:gravity="center"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/tvHideC"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:textSize="30dp"
+                android:gravity="center"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/tvHideD"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:textSize="30dp"
+                android:gravity="center"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/ivNumA"
+                android:layout_width="50dp"
+                android:layout_height="70dp" />
+
+            <ImageView
+                android:id="@+id/ivNumB"
+                android:layout_width="50dp"
+                android:layout_height="70dp" />
+
+            <ImageView
+                android:id="@+id/ivNumC"
+                android:layout_width="50dp"
+                android:layout_height="70dp" />
+
+            <ImageView
+                android:id="@+id/ivNumD"
+                android:layout_width="50dp"
+                android:layout_height="70dp" />
+
+
+            <EditText
+                android:id="@+id/etCheck"
+                android:hint="验证码"
+                android:inputType="number"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content" />
+
+            <Button
+                android:id="@+id/btnCheck"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="确定" />
+
+            <TextView
+                android:id="@+id/tvCheck"
+                android:text="结果"
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:text="计算类型验证码:"
+        android:layout_marginTop="50dp"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tvHideE"
+            android:visibility="gone"
+            android:textSize="25dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/tvHideF"
+            android:visibility="gone"
+            android:textSize="30dp"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/tvHideG"
+            android:visibility="gone"
+            android:textSize="25dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+
+        <ImageView
+            android:id="@+id/ivNumE"
+            android:layout_width="50dp"
+            android:layout_height="70dp" />
+
+        <ImageView
+            android:id="@+id/ivNumF"
+            android:layout_width="70dp"
+            android:layout_height="70dp" />
+
+        <ImageView
+            android:id="@+id/ivNumG"
+            android:layout_width="50dp"
+            android:layout_height="70dp" />
+
+        <EditText
+            android:id="@+id/etVerify"
+            android:hint="计算结果"
+            android:inputType="numberSigned"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:id="@+id/btnVerify"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="校验" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:text="结果"
+            android:visibility="gone"
+            android:id="@+id/tvVerify"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+</LinearLayout>
