@@ -20,7 +20,6 @@ import java.util.Random;
 public class Main extends ActionBarActivity {
     // Type-1:数值型验证码-ABCD; Type-2:计算型验证码-EFG
 
-    private String numStrTmp = "";
     private String numStr = "";
     private int intResult = -100;   // Type-2：计算结果，-100为ErrorCode
     private int[] numArray = new int[4]; // Type-1:四位验证码数字
@@ -87,6 +86,16 @@ public class Main extends ActionBarActivity {
 
         setNum(); // Type-1
         setVerify(); // Type-2
+        setEditString();
+    }
+
+    /**
+     * 编辑可变字符串
+     */
+    private void setEditString() {
+        TextView tvEditString = (TextView) findViewById(R.id.tvEditString);
+        String editString = getResources().getString(R.string.edit_string);
+        tvEditString.setText(String.format(editString, 5, 5.5, "5-5-5"));
     }
 
     /**
@@ -151,7 +160,7 @@ public class Main extends ActionBarActivity {
     /**
      * 将阿拉伯数字转成对应的汉字
      *
-     * @param num
+     * @param num 传入的阿拉伯数字
      * @return String
      */
     private String numToCharacter(int num) {
@@ -226,10 +235,9 @@ public class Main extends ActionBarActivity {
 
     public void initNum() {
         numStr = "";
-        numStrTmp = "";
         for (int i = 0; i < numArray.length; i++) {
             int numIntTmp = new Random().nextInt(10);
-            numStrTmp = String.valueOf(numIntTmp);
+            String numStrTmp = String.valueOf(numIntTmp);
             numStr = numStr + numStrTmp;
             numArray[i] = numIntTmp;
         }
@@ -273,8 +281,9 @@ public class Main extends ActionBarActivity {
     }
 
     /**
-     * 随机角度：[-40°,80°]
-     * @return
+     * 随机角度：(-2,-1,0,1,2,3,4)x20°
+     *
+     * @return int
      */
     public int randomAngle() {
         return 20 * (new Random().nextInt(5) - new Random().nextInt(3));
@@ -282,15 +291,16 @@ public class Main extends ActionBarActivity {
 
     /**
      * 随机颜色
-     * @return
+     *
+     * @return int
      */
     public int randomColor() {
         colorArray[0] = 0xFF000000; // BLACK
-        colorArray[1] = 0xFFFF00FF; // MAGENTA
+        colorArray[1] = 0xFFFF00FF; // MAGENTA-品红
         colorArray[2] = 0xFFFF0000; // RED
         colorArray[3] = 0xFF00FF00; // GREEN
         colorArray[4] = 0xFF0000FF; // BLUE
-        colorArray[5] = 0xFF00FFFF; // CYAN
+        colorArray[5] = 0xFF00FFFF; // CYAN-青
         //colorArray[6] = 0xFFFFFF00; // YELLOW:看不清楚
 
         int randomColorId = new Random().nextInt(6);
@@ -300,8 +310,9 @@ public class Main extends ActionBarActivity {
 
     /**
      * 将View转成Bitmap
-     * @param view
-     * @param width 宽度
+     *
+     * @param view   要转换成Bitmap的View
+     * @param width  宽度
      * @param height 高度
      * @return Bitmap
      */

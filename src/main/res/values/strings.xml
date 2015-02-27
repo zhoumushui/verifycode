@@ -4,5 +4,8 @@
     <string name="app_name">verifyCode</string>
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
+    <string name="edit_string_hint">Modify String content</string>
+    <string name="edit_string">Int:%1$d，Float：%2$.2f，String:%3$s</string>
+    <string name="text_cursor_hint">(Cursor color is same as text)</string>
 
 </resources>

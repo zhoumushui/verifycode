@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">验证码</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">设置</string>
+    <string name="edit_string_hint">编辑可变字符串内容：</string>
+    <string name="edit_string">整数型:%1$d，浮点型：%2$.2f，字符串:%3$s</string>
+    <string name="text_cursor_hint">（光标颜色和字符颜色相同）</string>
+</resources>
