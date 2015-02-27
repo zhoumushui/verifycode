@@ -1,4 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <dimen name="part_horizontal_margin">50dp</dimen>
+    <dimen name="tv_hide_width">80dp</dimen>
+    <dimen name="tv_hide_height">70dp</dimen>
+    <dimen name="iv_num_width">50dp</dimen>
+    <dimen name="iv_num_height">70dp</dimen>
 </resources>

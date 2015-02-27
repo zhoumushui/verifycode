@@ -2,12 +2,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_margin="5dp"
     android:orientation="vertical"
+    android:background="@drawable/background_shape"
     tools:context=".Main">
 
     <TextView
         android:layout_width="wrap_content"
         android:text="锁定EditText内容："
+        android:background="@drawable/textview_shape_stroke"
         android:layout_height="wrap_content" />
 
     <LinearLayout
@@ -31,6 +34,7 @@
         android:layout_marginTop="@dimen/part_horizontal_margin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:background="@drawable/textview_shape_stroke"
         android:text="数字类型验证码：" />
 
     <LinearLayout
@@ -45,32 +49,32 @@
 
             <TextView
                 android:id="@+id/tvHideA"
-                android:layout_width="70dp"
-                android:layout_height="70dp"
+                android:layout_width="@dimen/tv_hide_width"
+                android:layout_height="@dimen/tv_hide_height"
                 android:textSize="30dp"
                 android:gravity="center"
                 android:visibility="gone" />
 
             <TextView
                 android:id="@+id/tvHideB"
-                android:layout_width="70dp"
-                android:layout_height="70dp"
+                android:layout_width="@dimen/tv_hide_width"
+                android:layout_height="@dimen/tv_hide_height"
                 android:textSize="30dp"
                 android:gravity="center"
                 android:visibility="gone" />
 
             <TextView
                 android:id="@+id/tvHideC"
-                android:layout_width="70dp"
-                android:layout_height="70dp"
+                android:layout_width="@dimen/tv_hide_width"
+                android:layout_height="@dimen/tv_hide_height"
                 android:textSize="30dp"
                 android:gravity="center"
                 android:visibility="gone" />
 
             <TextView
                 android:id="@+id/tvHideD"
-                android:layout_width="70dp"
-                android:layout_height="70dp"
+                android:layout_width="@dimen/tv_hide_width"
+                android:layout_height="@dimen/tv_hide_height"
                 android:textSize="30dp"
                 android:gravity="center"
                 android:visibility="gone" />
@@ -83,23 +87,23 @@
 
             <ImageView
                 android:id="@+id/ivNumA"
-                android:layout_width="50dp"
-                android:layout_height="70dp" />
+                android:layout_width="@dimen/iv_num_width"
+                android:layout_height="@dimen/iv_num_height" />
 
             <ImageView
                 android:id="@+id/ivNumB"
-                android:layout_width="50dp"
-                android:layout_height="70dp" />
+                android:layout_width="@dimen/iv_num_width"
+                android:layout_height="@dimen/iv_num_height" />
 
             <ImageView
                 android:id="@+id/ivNumC"
-                android:layout_width="50dp"
-                android:layout_height="70dp" />
+                android:layout_width="@dimen/iv_num_width"
+                android:layout_height="@dimen/iv_num_height" />
 
             <ImageView
                 android:id="@+id/ivNumD"
-                android:layout_width="50dp"
-                android:layout_height="70dp" />
+                android:layout_width="@dimen/iv_num_width"
+                android:layout_height="@dimen/iv_num_height" />
 
             <!-- textCursorDrawable:光标颜色 -->
             <EditText
@@ -111,11 +115,6 @@
                 android:layout_width="80dp"
                 android:layout_height="wrap_content" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:text="@string/text_cursor_hint"
-                android:layout_height="wrap_content" />
-
             <Button
                 android:id="@+id/btnCheck"
                 android:layout_width="wrap_content"
@@ -124,10 +123,10 @@
 
             <TextView
                 android:id="@+id/tvCheck"
-                android:text="结果"
-                android:visibility="gone"
+                android:text="@string/text_cursor_hint"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
+
         </LinearLayout>
 
     </LinearLayout>
@@ -135,6 +134,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:text="计算类型验证码:"
+        android:background="@drawable/textview_shape_stroke"
         android:layout_marginTop="@dimen/part_horizontal_margin"
         android:layout_height="wrap_content" />
 
@@ -211,6 +211,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:text="@string/edit_string_hint"
+            android:background="@drawable/textview_shape_stroke"
             android:layout_height="wrap_content" />
 
         <TextView

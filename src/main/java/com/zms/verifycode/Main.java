@@ -244,6 +244,9 @@ public class Main extends ActionBarActivity {
     }
 
     public void setNum() {
+        int viewWidth = 30;
+        int viewHeight = 50;
+
         initNum();
         tvHideA.setText("" + numArray[0]);
         tvHideA.setTextColor(randomColor());
@@ -258,25 +261,32 @@ public class Main extends ActionBarActivity {
         Matrix matrixA = new Matrix();
         matrixA.reset();
         matrixA.setRotate(randomAngle());
-        Bitmap bmNumA = Bitmap.createBitmap(getBitmapFromView(tvHideA, 20, 50), 0, 0, 20, 50, matrixA, true);
+        Bitmap bmNumA = Bitmap.createBitmap(getBitmapFromView(tvHideA, viewWidth, viewHeight), 0, 0,
+                viewWidth, viewHeight, matrixA, true);
         ivNumA.setImageBitmap(bmNumA);
+
         // Num 2
         Matrix matrixB = new Matrix();
         matrixB.reset();
         matrixB.setRotate(randomAngle());
-        Bitmap bmNumB = Bitmap.createBitmap(getBitmapFromView(tvHideB, 20, 50), 0, 0, 20, 50, matrixB, true);
+        Bitmap bmNumB = Bitmap.createBitmap(getBitmapFromView(tvHideB, viewWidth, viewHeight), 0, 0,
+                viewWidth, viewHeight, matrixB, true);
         ivNumB.setImageBitmap(bmNumB);
+
         // Num 3
         Matrix matrixC = new Matrix();
         matrixC.reset();
         matrixC.setRotate(randomAngle());
-        Bitmap bmNumC = Bitmap.createBitmap(getBitmapFromView(tvHideC, 20, 50), 0, 0, 20, 50, matrixC, true);
+        Bitmap bmNumC = Bitmap.createBitmap(getBitmapFromView(tvHideC, viewWidth, viewHeight), 0, 0,
+                viewWidth, viewHeight, matrixC, true);
         ivNumC.setImageBitmap(bmNumC);
+
         // Num 4
         Matrix matrixD = new Matrix();
         matrixD.reset();
         matrixD.setRotate(randomAngle());
-        Bitmap bmNumD = Bitmap.createBitmap(getBitmapFromView(tvHideD, 20, 50), 0, 0, 20, 50, matrixD, true);
+        Bitmap bmNumD = Bitmap.createBitmap(getBitmapFromView(tvHideD, viewWidth, viewHeight), 0, 0,
+                viewWidth, viewHeight, matrixD, true);
         ivNumD.setImageBitmap(bmNumD);
     }
 
